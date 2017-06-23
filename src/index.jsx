@@ -1,17 +1,18 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import ReactDOM from 'react-dom'
 import {combineReducers, createStore} from 'redux'
 import {Provider} from 'react-redux'
-import Field from './field'
+import counterReducer from '../counterReducer'
+import Counter from '../counter'
 
 const reducers = combineReducers({
-    field: () => ({value: 'Opa2'})
+    counter: counterReducer
 })
 
 ReactDOM.render(
     
     <Provider store={createStore(reducers)}>   
-        <Field initialValue='Teste' />
+        <Counter />
     </Provider>
-    ,document.getElementById('app')
+    ,document.getElementById("app")
 )
