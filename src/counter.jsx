@@ -1,7 +1,7 @@
 import React from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import {inc, dec, stepChanged} from './src/counterActions'
+import {inc, dec, stepChanged} from './counterActions'
 
 
 const Counter = props =>(
